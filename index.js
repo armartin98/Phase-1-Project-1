@@ -26,6 +26,14 @@ function currency(){
                 exchangeDisplay.innerText = `${exchangeValue.toFixed(2)} ${exchangeType}`
                 returnValue.appendChild(exchangeDisplay)
             })
+            const darkLight = document.querySelector('#darkLight')
+            
+            darkLight.addEventListener('click', () => {
+                const element = document.body;
+                element.classList.toggle("darkMode")
+            })
         })
 }
 currency()
+
+
