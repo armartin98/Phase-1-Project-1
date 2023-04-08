@@ -8,3 +8,7 @@ body{
     background: black;
     color: white;
 }
+
+form{
+    padding: 0px 150px;
+}
