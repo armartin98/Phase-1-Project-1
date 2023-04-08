@@ -9,16 +9,19 @@
     <h1>Currency Exchange Calculator</h1>
     <button id="darkLight">Dark/Light Mode</button>
     <form id="calculation">
-        <label for="usdAmount">Enter USD Amount</label>
-        <input type="number" name="usdAmount" id="usdAmount" placeholder="ex. 100">
-        <br>
-        <label for="exchangeType">Exchange Type</label>
-        <select name="exchangeType" id="exchangeType">
+        <fieldset>
+            <label for="usdAmount">Enter USD Amount</label>
+            <input type="number" name="usdAmount" id="usdAmount" placeholder="ex. 100">
+            <br>
+            <label for="exchangeType">Exchange Type</label>
+            <select name="exchangeType" id="exchangeType">
 
-        </select>
-        <br>
-        <input type="submit">
+            </select>
+            <br>
+            <input type="submit">
+        </fieldset>
     </form>
+    <p>Press Space Bar to reset.</p>
     <div id="returnValue">
 
     </div>
