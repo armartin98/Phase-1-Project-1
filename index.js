@@ -3,6 +3,7 @@ function currency(){
         .then(res => res.json())
         .then(rates => {
             const exchangeType = document.querySelector('#exchangeType')
+            const returnValue = document.querySelector('#returnValue')
             const ratesArray = Object.keys(rates.usd)
             ratesArray.map(x => {
                 const option = document.createElement('option')
@@ -21,7 +22,6 @@ function currency(){
 
                 const exchangeValue = usdAmount * exchangeRate
 
-                const returnValue = document.querySelector('#returnValue')
                 const exchangeDisplay = document.createElement('p')
                 exchangeDisplay.innerText = `${exchangeValue.toFixed(2)} ${exchangeType}`
                 returnValue.appendChild(exchangeDisplay)
@@ -31,6 +31,15 @@ function currency(){
             darkLight.addEventListener('click', () => {
                 const element = document.body;
                 element.classList.toggle("darkMode")
+            })
+            document.addEventListener('keydown', (e) => {
+                if (e.code === 'Space') {
+                    form.reset()
+                    while (returnValue.firstChild){
+                        returnValue.removeChild(returnValue.firstChild)
+                    }
+                }
+                e.preventDefault()
             })
         })
 }
