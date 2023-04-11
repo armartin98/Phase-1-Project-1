@@ -12,4 +12,8 @@ Open the currency exchange calculator by using `open index.html` in the terminal
 
 Author - Andrew Martin
 
-For additional help or support contact me [Email](mailto:armartin1998@gmail.com)
+For additional help or support contact me [Email](mailto:armartin1998@gmail.com).
+
+## Acknowledgment
+
+A special thanks to [link](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/) for providing a list of open public API's that was used within this app.
