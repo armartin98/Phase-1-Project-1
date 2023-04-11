@@ -7,3 +7,9 @@ The currency exchange calculator app allows the user to input any United States 
 ## Instillation
 
 Open the currency exchange calculator by using `open index.html` in the terminal.
+
+## Author and Support
+
+Author - Andrew Martin
+
+For additional help or support contact me [Email](@armartin1998@gmail.com)
