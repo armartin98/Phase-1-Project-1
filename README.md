@@ -12,4 +12,4 @@ Open the currency exchange calculator by using `open index.html` in the terminal
 
 Author - Andrew Martin
 
-For additional help or support contact me [Email](@armartin1998@gmail.com)
+For additional help or support contact me [Email](mailto:armartin1998@gmail.com)
