@@ -23,7 +23,7 @@ function currency(){
                 const exchangeValue = usdAmount * exchangeRate
 
                 const exchangeDisplay = document.createElement('p')
-                exchangeDisplay.innerText = `${exchangeValue.toFixed(2)} ${exchangeType}`
+                exchangeDisplay.innerText = `${usdAmount} USD is equal to ${exchangeValue.toFixed(2)} ${exchangeType}`
                 returnValue.appendChild(exchangeDisplay)
             })
             const darkLight = document.querySelector('#darkLight')
@@ -39,7 +39,6 @@ function currency(){
                         returnValue.removeChild(returnValue.firstChild)
                     }
                 }
-                e.preventDefault()
             })
         })
 }
