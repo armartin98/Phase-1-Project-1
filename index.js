@@ -3,15 +3,14 @@ function currency(){
         .then(res => res.json())
         .then(rates => {
             console.log(rates)
-            // const exchangeType = document.querySelector('#exchangeType')
-            // const returnValue = document.querySelector('#returnValue')
-            // const ratesArray = Object.keys(rates.usd)
-            // ratesArray.map(x => {
-            //     const option = document.createElement('option')
-            //     option.value = x
-            //     option.innerText = x
-            //     exchangeType.appendChild(option)
-            // })
+            const exchangeType = document.querySelector('#exchangeType')
+            const returnValue = document.querySelector('#returnValue')
+            rates.map(exchange => {
+                const option = document.createElement('option')
+                option.value = exchange["Abbreviation"]
+                option.innerText = exchange["Abbreviation"]
+                exchangeType.appendChild(option)
+            })
             // const form = document.querySelector('#calculation')
             // form.addEventListener('submit', (e) => {
             //     e.preventDefault()
