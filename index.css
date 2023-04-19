@@ -10,6 +10,13 @@ body{
 }
 
 form{
-    padding: 10px 400px;
+    padding: 25px;
+}
+
+fieldset{
+    padding: 25px;
+    background-color: deepskyblue;
+    max-width: fit-content;
+    margin: auto;
 }
 
