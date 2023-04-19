@@ -1,4 +1,4 @@
-# Currency Exchange Calculator
+# USD Currency Exchange Calculator
 
 ## Description
 
@@ -6,7 +6,7 @@ The currency exchange calculator app allows the user to input any United States 
 
 ## Installation
 
-Open the currency exchange calculator by using `open index.html` in the terminal.
+To open the USD currency exchange calculator first open the terminal and navigate to the Phase-1-Project folder and open vscode by typing `code .` in the CLI. Next, start the json server by running `json-server --watch db.json`, which will return a resource `http://localhost:3000/currency`. Then, open a new window from the terminal to open the currency exchange calculator using `open index.html` in the new terminal window.
 
 ## Author and Support
 
