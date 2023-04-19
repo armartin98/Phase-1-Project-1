@@ -1,8 +1,7 @@
-function currency(){
+function currency() {
     fetch('http://localhost:3000/currency')
         .then(res => res.json())
         .then(rates => {
-            console.log(rates)
             const exchangeType = document.querySelector('#exchangeType')
             const returnValue = document.querySelector('#returnValue')
             rates.map(exchange => {
@@ -18,18 +17,18 @@ function currency(){
                 const usdAmount = document.querySelector('#usdAmount').value
                 const exchangeType = document.querySelector('#exchangeType').value
                 const selectedRate = rates.find(type => {
-                    if (type.abbreviation === exchangeType){
-                        console.log(type.exchangeRate)
+                    if (type.abbreviation === exchangeType) {
+                        
                         const exchangeValue = usdAmount * type.exchangeRate
 
                         const exchangeDisplay = document.createElement('p')
-                        exchangeDisplay.innerText = `${usdAmount} USD is equal to ${exchangeValue.toFixed(2)} ${exchangeType}`
+                        exchangeDisplay.innerText = `${usdAmount} USD is equal to ${exchangeValue.toFixed(2)} ${exchangeType}, and is the official currency of these Countries/Territories: ${type.countryTerritory}`
                         returnValue.appendChild(exchangeDisplay)
                     }
                 })
             })
             const darkLight = document.querySelector('#darkLight')
-            
+
             darkLight.addEventListener('click', () => {
                 const element = document.body;
                 element.classList.toggle("darkMode")
@@ -37,7 +36,7 @@ function currency(){
             document.addEventListener('keydown', (e) => {
                 if (e.code === 'Space') {
                     form.reset()
-                    while (returnValue.firstChild){
+                    while (returnValue.firstChild) {
                         returnValue.removeChild(returnValue.firstChild)
                     }
                 }
