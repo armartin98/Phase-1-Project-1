@@ -2,7 +2,7 @@
     "currency": [
         {
             "id": 1,
-            "Country or Territory": [
+            "countryTerritory": [
                 "United States of America",
                 "Commonwealth of Puerto Rico",
                 "Ecuador",
@@ -21,13 +21,13 @@
                 "Panama",
                 "Turks and Caicos"
             ],
-            "Currency Name": "United States Dollar",
-            "Abbreviation": "USD",
-            "Exchange Rate": 1
+            "currencyName": "United States Dollar",
+            "abbreviation": "USD",
+            "exchangeRate": 1
         },
         {
             "id": 2,
-            "Country or Territory": [
+            "countryTerritory": [
                 "Austria",
                 "Belgium",
                 "Croatia",
@@ -49,38 +49,38 @@
                 "Slovenia",
                 "Spain"
             ],
-            "Currency Name": "Euro",
-            "Abbreviation": "EUR",
-            "Exchange Rate": 0.914324
+            "currencyName": "Euro",
+            "abbreviation": "EUR",
+            "exchangeRate": 0.914324
         },
         {
             "id": 3,
-            "Country or Territory": [
+            "countryTerritory": [
                 "Canada"
             ],
-            "Currency Name": "Canadian Dollar",
-            "Abbreviation": "CAD",
-            "Exchange Rate": 1.338995
+            "currencyName": "Canadian Dollar",
+            "abbreviation": "CAD",
+            "exchangeRate": 1.338995
         },
         {
             "id": 4,
-            "Country or Territory": [
+            "countryTerritory": [
                 "Japan"
             ],
-            "Currency Name": "Japanese Yen",
-            "Abbreviation": "JPY",
-            "Exchange Rate": 134.315952
+            "currencyName": "Japanese Yen",
+            "abbreviation": "JPY",
+            "exchangeRate": 134.315952
         },
         {
             "id": 5,
-            "Country or Territory": [
+            "countryTerritory": [
                 "United Kingdom", 
                 "South Georgia", 
                 "South Sandwich Islands"
             ],
-            "Currency Name": "Sterling Pound",
-            "Abbreviation": "GBP",
-            "Exchange Rate": 0.807934
+            "currencyName": "Sterling Pound",
+            "abbreviation": "GBP",
+            "exchangeRate": 0.807934
         }
     ]
 }
