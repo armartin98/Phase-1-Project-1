@@ -10,39 +10,38 @@ function currency() {
                 option.innerText = exchange.abbreviation
                 exchangeType.appendChild(option)
             })
+            
             const form = document.querySelector('#calculation')
             form.addEventListener('submit', (e) => {
                 e.preventDefault()
-
-                const usdAmount = document.querySelector('#usdAmount').value
-                const exchangeType = document.querySelector('#exchangeType').value
-                const selectedRate = rates.find(type => {
-                    if (type.abbreviation === exchangeType) {
-                        
-                        const exchangeValue = usdAmount * type.exchangeRate
-
-                        const exchangeDisplay = document.createElement('p')
-                        exchangeDisplay.innerText = `${usdAmount} USD is equal to ${exchangeValue.toFixed(2)} ${exchangeType}, and is the official currency of these Countries/Territories: ${type.countryTerritory}`
-                        returnValue.appendChild(exchangeDisplay)
-                    }
-                })
+                
+                if (e.type === 'submit'){
+                    const usdAmount = document.querySelector('#usdAmount').value
+                    const exchangeType = document.querySelector('#exchangeType').value
+                    rates.find(type => {
+                        if (type.abbreviation === exchangeType) {
+                            
+                            const exchangeValue = usdAmount * type.exchangeRate
+                            
+                            const exchangeDisplay = document.createElement('p')
+                            exchangeDisplay.innerText = `${usdAmount} USD is equal to ${exchangeValue.toFixed(2)} ${exchangeType}, and is the official currency of these Countries/Territories: ${type.countryTerritory}`
+                            returnValue.appendChild(exchangeDisplay)
+                        }
+                    })
+                    form.reset()
+                }
             })
-            const darkLight = document.querySelector('#darkLight')
 
+            const resultContainer = document.querySelector("#resultContainer")
+            resultContainer.addEventListener('dblclick', () => {
+                returnValue.innerHTML = ""
+            })
+
+            const darkLight = document.querySelector('#darkLight')
             darkLight.addEventListener('click', () => {
                 const element = document.body;
                 element.classList.toggle("darkMode")
             })
-            document.addEventListener('keydown', (e) => {
-                if (e.code === 'Space') {
-                    form.reset()
-                    while (returnValue.firstChild) {
-                        returnValue.removeChild(returnValue.firstChild)
-                    }
-                }
-            })
         })
 }
 currency()
-
-
